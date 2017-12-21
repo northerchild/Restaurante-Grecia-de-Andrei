@@ -5,6 +5,7 @@
 	%title La mejor cena romantica en Grecia de Andrei
 	%meta{name:"Grecia de Andrei está ubicado en Usaquén, una linda zona de la ciudad y consolidada como polo gastronómico de Bogotá. En el restaurante encontramos una ventana a la rica gastronomía griega. Si es la primera vez en visitar el lugar se recomienda pedir el souvlakis (pinchos griegos acompañados de papas horneadas ..."}
 	%link{rel:"stylesheet", href:"css/normalize.css"}
+	%link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"}
 	%link{rel:"stylesheet", href:"css/style.css"}
 	%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 	%script{src:"js/vendor/modernizr-2.8.3.min.js"}
@@ -18,9 +19,14 @@
 			actualiza tu navegador para una mejor experiencia
 	="<![endif]-->"
 	.video-container
-		%video{autoplay:true,loop:true}
+		%video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/video/img/bbq.jpg" }
 			%source{src:"/video/bbq.mp4",typ:"video/mp4"}
 			%source{src:"/video/bbq.webm",typ:"video/webm"}
+	.row.full-height.middle-xs.center-xs.relative.up
+		.col-xs-12
+			.box
+				%h1.white-text Restaurante Grecia de Andrei
+
 
 	 
 
