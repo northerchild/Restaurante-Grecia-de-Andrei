@@ -8,6 +8,7 @@
 	%link{rel:"stylesheet", href:"assets/css/normalize.css"}
 	%link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"}
 	%link{rel:"stylesheet", href:"assets/css/style.css"}
+	%link{rel:"stylesheet", href:"assets/css/bootstrap.css"}
 	%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 	%script{src:"assets/js/vendor/modernizr-2.8.3.min.js"}
 	%body
@@ -20,13 +21,23 @@
 			actualiza tu navegador para una mejor experiencia
 	="<![endif]-->"
 	.video-container
-		%video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/video/img/bbq.jpg" }
+		%video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/assets/video/img/bbq.jpg" }
 			%source{src:"/assets/video/bbq.mp4",typ:"video/mp4"}
 			%source{src:"/assets/video/bbq.webm",typ:"video/webm"}
 	.row.full-height.middle-xs.center-xs.relative.up
 		.col-xs-12
-			.box
-				%h1.white-text Restaurante Grecia de Andrei
+			.box.white-text
+				%img.logo{src:"/assets/imgs/logo.png"}
+				%h1.dancing-script.tittle.no-margin Restaurante Grecia de Andrei
+				%p#is-open Abierto Ahora
+		%nav.fixed.top.right.navigation.white-text#navigation
+			%ul.list-inline
+				%li Inicio
+				%li Menú
+				%li Galería
+				%li	Contacto
+				%li Como llegar		 
+			
 
 
 	 

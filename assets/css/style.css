@@ -84,8 +84,8 @@ textarea {
 .relative {
   position: relative; }
 
-.up {
-  z-index: 10; }
+.fixed {
+  position: fixed; }
 
 .video-container {
   height: 100%;
@@ -104,6 +104,12 @@ textarea {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.logo {
+  width: 12em; }
+
+.navigation li {
+  padding: 5px 10px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -115,6 +121,27 @@ textarea {
 
 .white-text {
   color: #fff; }
+
+.dancing-script {
+  font-family: 'Dancing Script', cursive; }
+
+.tittle {
+  font-size: 4em; }
+
+.no-margin {
+  margin: 0; }
+
+.up {
+  z-index: 10; }
+
+.top {
+  top: 3em; }
+
+.right {
+  right: 5em; }
+
+.medium, .navigation li {
+  font-size: 1.5em; }
 
 /*
  * Hide visually and from screen readers
@@ -252,7 +279,5 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-
-/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

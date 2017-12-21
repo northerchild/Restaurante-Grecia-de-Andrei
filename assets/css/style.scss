@@ -99,10 +99,11 @@ textarea {
 {
 	position:relative;
 }
-.up
+.fixed
 {
-	z-index:10;
+    position:fixed;
 }
+
 .video-container
 {
     height: 100%;
@@ -124,8 +125,19 @@ textarea {
     }
 }
 
+.logo
+{
+    width: 12em;
+}
 
-
+.navigation
+{
+    li
+    {
+        @extend .medium;
+        padding: 5px 10px;
+    }
+}
 
 
 
@@ -155,6 +167,34 @@ textarea {
 	{
 		color: #fff;
 	}
+    .dancing-script
+    {
+        font-family: 'Dancing Script', cursive;
+    }
+    .tittle
+    {
+      font-size: 4em;  
+    }
+    .no-margin
+    {
+        margin: 0;
+    }
+    .up
+    {
+        z-index:10;
+    }
+    .top
+    {
+        top: 3em;
+    }
+    .right
+    {
+        right: 5em;
+    }
+    .medium
+    {
+        font-size: 1.5em;
+    }
 /*
  * Hide visually and from screen readers
  */
