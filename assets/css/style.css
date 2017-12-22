@@ -108,7 +108,19 @@ textarea {
   width: 12em; }
 
 .navigation li {
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  -webkit-transition: all ease .8s;
+  -o-transition: all ease .8s;
+  transition: all ease .8s; }
+  .navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.navigation a {
+  color: #fff;
+  cursor: pointer; }
+  .navigation a:hover {
+    text-decoration: none;
+    color: #fff; }
 
 /* ==========================================================================
    Helper classes
@@ -116,11 +128,17 @@ textarea {
 .full-height {
   height: 100%; }
 
+.full-width {
+  width: 100%; }
+
 .row {
   margin: 0; }
 
 .white-text {
   color: #fff; }
+
+.black {
+  background-color: #222; }
 
 .dancing-script {
   font-family: 'Dancing Script', cursive; }
@@ -130,6 +148,9 @@ textarea {
 
 .no-margin {
   margin: 0; }
+
+.absolute {
+  position: absolute; }
 
 .up {
   z-index: 10; }
@@ -142,6 +163,12 @@ textarea {
 
 .medium, .navigation li {
   font-size: 1.5em; }
+
+.bottom {
+  bottom: 0; }
+
+.large-padding {
+  padding: 10px 15px; }
 
 /*
  * Hide visually and from screen readers
