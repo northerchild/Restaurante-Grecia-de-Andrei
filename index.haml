@@ -2,7 +2,7 @@
 %html{class: "no-js", lang:"es"}
 	%head
 	%meta{charset: "utf-8"}
-		%title La mejor comida en Restaurant Facilito
+		%title La mejor comida en Grecia de Andrei
 		%meta{name: "description", content: "Grecia de Andrei está ubicado en Usaquén, una linda zona de la ciudad y consolidada como polo gastronómico de Bogotá. En el restaurante encontramos una ventana a la rica gastronomía griega. Si es la primera vez en visitar el lugar se recomienda pedir el souvlakis (pinchos griegos acompañados de papas horneadas ...."}/
 		%link{rel: "stylesheet", href: "/assets/css/normalize.css"}
 		%link{rel: "stylesheet", href: "/assets/css/bootstrap.css"}
@@ -25,7 +25,7 @@
 			%video{autoplay: true, loop: true, width: 1280, height: 720, poster: "/assets/video/img/bbq.jpg"}
 				%source{src: "/assets/video/bbq.mp4"}/
 				%source{src: "/assets/video/bbq.webm"}/
-		.row.full-height.middle-xs.center-xs
+		.row.full-height.middle-xs.center-xs.relative#home
 			.col-xs-12.sobre
 				.box
 					%img{src: "/assets/imgs/logo.png", width: 200}
@@ -48,8 +48,13 @@
 									-menu.each do |item|
 										%li
 											%a{:href => "#"}= item
-	.full-height		  			
-	
+	.text-center#menu
+		-menu_photos = [{name:"Club Sandiwch", img:"club-sandwich",pricing:"10.00"},{name:"Combo Hamburguesa", img:"combo",pricing:"15.00"},{name:"Hamburguesa", img:"hamburger",pricing:"20.00"},{name:"Hot cakes", img:"hot-cakes",pricing:"32.00"},{name:"Panini", img:"panini",pricing:"12.00"},{name:"Papas", img:"papas",pricing:"52.00"},{name:"Club Sandiwch", img:"club-sandwich",pricing:"21.00"},{name:"Hamburguesah", img:"hamburger",pricing:"42.00"}]
+		.row
+			-menu_photos.each do |photo|
+				.col-md-4.col-lg-3.col-sm-6.col-xs-12.food
+					%img{src:"/assets/imgs/food/#{photo[:img]}-thumb.jpg"}
+
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
 	%script
