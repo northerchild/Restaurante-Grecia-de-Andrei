@@ -48,12 +48,19 @@
 									-menu.each do |item|
 										%li
 											%a{:href => "#"}= item
-	.text-center#menu
+	.text-center.relative#menu
+		.absolute.white#menu-title
+			%h2.dancing-script.title Menú
 		-menu_photos = [{name:"Club Sandiwch", img:"club-sandwich",pricing:"10.00"},{name:"Combo Hamburguesa", img:"combo",pricing:"15.00"},{name:"Hamburguesa", img:"hamburger",pricing:"20.00"},{name:"Hot cakes", img:"hot-cakes",pricing:"32.00"},{name:"Panini", img:"panini",pricing:"12.00"},{name:"Papas", img:"papas",pricing:"52.00"},{name:"Club Sandiwch", img:"club-sandwich",pricing:"21.00"},{name:"Hamburguesah", img:"hamburger",pricing:"42.00"}]
 		.row
 			-menu_photos.each do |photo|
-				.col-md-4.col-lg-3.col-sm-6.col-xs-12.food
-					%img{src:"/assets/imgs/food/#{photo[:img]}-thumb.jpg"}
+				.col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(/assets/imgs/food/#{photo[:img]}-thumb.jpg)"}
+					.screen
+						.row.middle-xs.full-height
+							.col-xs-12
+								%h3.dancing-script.white-text.subtitle= photo[:name]
+								%p.no-margin.white-text.medium= "$ " + photo[:pricing ] + " USD"
+				
 
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
