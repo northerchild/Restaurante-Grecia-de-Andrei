@@ -155,6 +155,26 @@ textarea {
   top: calc(50% - 2.5em);
   left: calc(50% - 150px); }
 
+#gallery {
+  overflow: hidden;
+  height: 100%; }
+  #gallery .inner {
+    white-space: nowrap;
+    position: relative;
+    left: 0%;
+    -webkit-transition: left ease 1.5s;
+    -o-transition: left ease 1.5s;
+    transition: left ease 1.5s; }
+  #gallery .image {
+    height: 100%;
+    margin-right: -4px;
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

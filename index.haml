@@ -1,3 +1,4 @@
+-gallery_image = ["club-sandwich","papas","hamburger","panini","club-sandwich","papas"]
 !!!5
 %html{class: "no-js", lang:"es"}
 	%head
@@ -9,6 +10,7 @@
 		%link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.0/flexboxgrid.min.css"}
 		%link{href:"https://fonts.googleapis.com/css?family=Dancing+Script:400,700", rel:"stylesheet"}
 		%link{rel: "stylesheet", href: "/assets/css/style.css"}
+		%meta{:"data-name" => "image-counter", content:"#{gallery_image.size-1}"}
 		%meta{name: "viewport", content: "width=device-width, initial-scale=1"}/
 		%script{src: "/assets/js/vendor/modernizr-2.8.3.min.js"}
 	%body
@@ -60,7 +62,10 @@
 							.col-xs-12
 								%h3.dancing-script.white-text.subtitle= photo[:name]
 								%p.no-margin.white-text.medium= "$ " + photo[:pricing ] + " USD"
-				
+	#gallery
+		.inner
+			-gallery_image.each do |images|
+				.image{style:"background-image:url(/assets/imgs/food/#{images}.jpg)"}			
 
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}

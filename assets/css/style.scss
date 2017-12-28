@@ -195,6 +195,7 @@ textarea {
     }
 }
 
+
 #menu-title
 {
     z-index: 5;
@@ -203,7 +204,29 @@ textarea {
     left: calc(50% - 150px);
 }
 
-
+#gallery
+{   
+    overflow:hidden;
+    .inner
+    {
+        white-space: nowrap;
+        position:relative;
+        left: 0%;
+        transition: left ease 1.5s;
+    }
+    height: 100%;
+    .image
+    {
+        height: 100%;
+        margin-right:-4px;
+        height: 100vh; 
+        width: 100%;
+        display: inline-block;
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
 
 
 
