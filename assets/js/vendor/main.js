@@ -22,6 +22,7 @@
 			left: "-"+currentPosition*100+"%"
 		});
 	},2500)
+	//Fin del controlador 
 
 	$(window).scroll(()=>{
 		const inBottom = isInBottom()
