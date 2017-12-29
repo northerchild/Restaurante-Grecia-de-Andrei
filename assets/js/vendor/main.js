@@ -3,8 +3,14 @@
 	let sticky = false
 	let currentPosition = 0
 	const imageCounter =  $("[data-name=image-counter]").attr("content")
+	const email = "osarus-13@hotmail.com"
 	console.log(imageCounter)
 	console.log($(window).height());
+	$("#contact-form").on("submit",function(e){
+		sendForm($(this))
+		e.preventDefault()
+		return false
+	})
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
 
@@ -64,5 +70,15 @@
 		return $(window).scrollTop() > $(window).height() - (descripcionHeight * 1.8)
 	}
 	
+	//Funcion de enviado metodo AJAX
+	function sendForm($form){
+		console.log($form.formObject());
+		$.ajax({
+	    url: $form.attr("action"), 
+	    method: "POST",
+	    data: $form.formObject(),
+	    dataType: "json"
+	})
+	}
 
 })()

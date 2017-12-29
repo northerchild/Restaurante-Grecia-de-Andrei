@@ -74,12 +74,27 @@
 				cocinar no es una profesión, no es una técnica,	es un
 				%strong.dancing-script.medium Arte
 			%p Grecia de Andrei está ubicado en Usaquén, una linda zona de la ciudad y consolidada como polo gastronómico de Bogotá. En el restaurante encontramos una ventana a la rica gastronomía griega. Si es la primera vez en visitar el lugar se recomienda pedir el souvlakis (pinchos griegos acompañados de papas horneadas al limón), el moussaka o el gyros. En las bebidas encontraremos deliciosos cocteles griegos. El restaurante cuenta con un amplio lounge en el primer piso ideal para compartir en familia o con amigos, y un área más privada en el segundo piso. Ambos espacios han sido cuidadosamente decorados logrando una combinación entre el estilo vintage que va desde la silletería y muebles, hasta artículos deco que cuelgan en sus paredes como botellas y pequeños recipientes, y un concepto más moderno reflejado en los tonos, iluminación y techo maderoso. Si vamos un viernes a la noche podremos vivir un momento bien especial disfrutando música en vivo. Grecia de Andrei abre sus puertas para probar ricos platos gourmet, compartiendo en familia, amigos o en pareja.
-			%strong.dancing-script.medium Coco - Chef Master						
+			%strong.dancing-script.medium Coco - Chef Master
+	.top-space.black.white-text.full-height#contact
+		.row.middle-xs.full-height
+			.col-xs-12
+				.box
+					%form{action:"https://formspree.io/osarus-13@hotmail.com", method:"POST", id:"contact-form"}
+						.row.center-xs
+							.col-xs-2.col-md-1
+								.box
+							.col-xs-5
+								.box
+									%input{type:"email",name:"email",placeholder:"Escribe tú correo"}
+									%input{type:"text",name:"name",placeholder:"Escribe tú nombre"}
+									%textarea{name:"body",placeholder:"Escribe tú mensaje"}
+									%button{type:"submit",class:"btn"}Enviar										
 
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
 	%script
 		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+	%script{src:"/assets/js/vendor/form_object.js"}
 	%script{src:"/assets/js/vendor/main.js"}	
     	 
 			
