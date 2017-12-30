@@ -228,16 +228,6 @@ textarea {
     }
 }
 
-input,textarea
-{
-   font-size: 2em;
-   padding: 0.5em;
-   border: none;
-   outline: none;
-   border-bottom: 1px solid #eee;
-   background-color: transparent;
-   width: 100%;
-}
 
 .container
 {
@@ -250,6 +240,32 @@ input,textarea
 #contact
 {
     margin-top: -200px;
+}
+
+.step-form
+{
+    .step
+    {
+        max-height: 0;
+        overflow: hidden;
+        transition: all  ease 1.5s;
+        padding: 1em 0.5em;
+        margin: 0px;
+        &.active
+        {
+            max-height: 150px;
+        }
+        input,textarea
+        {
+           font-size: 2em;
+           padding: 0.5em;
+           border: none;
+           outline: none;
+           border-bottom: 1px solid #eee;
+           background-color: transparent;
+           width: 100%;
+        }   
+    }
 }
 /* ==========================================================================
    Helper classes

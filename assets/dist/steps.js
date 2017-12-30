@@ -1,0 +1,2 @@
+"use strict";!function(){function t(){if(document.querySelector(e).checkValidity());else{n($(e).find(".input:invalid").first().parent())}}function n(t){$(".step.active").removeClass("active"),t.addClass("active"),t.find(".input").focus()}var e="#contact-form";$(e).find(".input").on("change",function(e){var i=$(e.target).parent().next(".step");i.length>0?n(i):t()})}();
+//# sourceMappingURL=steps.js.map

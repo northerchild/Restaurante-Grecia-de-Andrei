@@ -6,11 +6,17 @@
 	const email = "osarus-13@hotmail.com"
 	console.log(imageCounter)
 	console.log($(window).height());
+	
+	//Testing del formulario
+	/*
 	$("#contact-form").on("submit",function(e){
 		sendForm($(this))
 		e.preventDefault()
 		return false
 	})
+	*/
+	//fin del testing
+
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
 

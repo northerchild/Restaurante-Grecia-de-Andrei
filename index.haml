@@ -79,23 +79,28 @@
 		.row.middle-xs.full-height
 			.col-xs-12
 				.box
-					%form{action:"https://formspree.io/osarus-13@hotmail.com", method:"POST", id:"contact-form"}
+					%form{action:"https://formspree.io/osarus-13@hotmail.com", method:"POST", id:"contact-form",class:"step-form"}
 						.row.center-xs
 							.col-xs-2.col-md-1
 								.box
 							.col-xs-5
 								.box
-									%input{type:"email",name:"email",placeholder:"Escribe tú correo"}
-									%input{type:"text",name:"name",placeholder:"Escribe tú nombre"}
-									%textarea{name:"body",placeholder:"Escribe tú mensaje"}
-									%button{type:"submit",class:"btn"}Enviar										
+									%fieldset.step.active
+										%input{type:"email",name:"email",placeholder:"Escribe tú correo", class:"input", required:true}
+									%fieldset.step	
+										%input{type:"text",name:"name",placeholder:"Escribe tú nombre", class:"input", required:true}
+									%fieldset.step
+										%textarea{name:"body",placeholder:"Escribe tú mensaje", class:"input", required:true}
+									%div	
+										%button{type:"submit",class:"btn"}Enviar										
 
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
 	%script
 		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
 	%script{src:"/assets/js/vendor/form_object.js"}
-	%script{src:"/assets/js/vendor/main.js"}	
+	%script{src:"/assets/js/vendor/main.js"}
+	%script{src:"/assets/dist/steps.js"}	
     	 
 			
 

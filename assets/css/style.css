@@ -175,21 +175,31 @@ textarea {
     background-position: center;
     background-repeat: no-repeat; }
 
-input, textarea {
-  font-size: 2em;
-  padding: 0.5em;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #eee;
-  background-color: transparent;
-  width: 100%; }
-
 .container .card {
   padding: 2em;
   margin-top: -250px; }
 
 #contact {
   margin-top: -200px; }
+
+.step-form .step {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all  ease 1.5s;
+  -o-transition: all  ease 1.5s;
+  transition: all  ease 1.5s;
+  padding: 1em 0.5em;
+  margin: 0px; }
+  .step-form .step.active {
+    max-height: 150px; }
+  .step-form .step input, .step-form .step textarea {
+    font-size: 2em;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #eee;
+    background-color: transparent;
+    width: 100%; }
 
 /* ==========================================================================
    Helper classes

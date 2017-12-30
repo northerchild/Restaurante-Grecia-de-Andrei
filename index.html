@@ -203,17 +203,25 @@ cocinar no es una profesión, no es una técnica,	es un
 <div class="row middle-xs full-height">
 <div class="col-xs-12">
 <div class="box">
-<form action="https://formspree.io/osarus-13@hotmail.com" id="contact-form" method="POST">
+<form action="https://formspree.io/osarus-13@hotmail.com" class="step-form" id="contact-form" method="POST">
 <div class="row center-xs">
 <div class="col-xs-2 col-md-1">
 <div class="box"></div>
 </div>
 <div class="col-xs-5">
 <div class="box">
-<input name="email" placeholder="Escribe tú correo" type="email">
-<input name="name" placeholder="Escribe tú nombre" type="text">
-<textarea name="body" placeholder="Escribe tú mensaje"></textarea>
+<fieldset class="step active">
+<input class="input" name="email" placeholder="Escribe tú correo" required type="email">
+</fieldset>
+<fieldset class="step">
+<input class="input" name="name" placeholder="Escribe tú nombre" required type="text">
+</fieldset>
+<fieldset class="step">
+<textarea class="input" name="body" placeholder="Escribe tú mensaje" required></textarea>
+</fieldset>
+<div>
 <button class="btn" type="submit">Enviar</button>
+</div>
 </div>
 </div>
 </div>
@@ -228,4 +236,5 @@ window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><
 </script>
 <script src="/assets/js/vendor/form_object.js"></script>
 <script src="/assets/js/vendor/main.js"></script>
+<script src="/assets/dist/steps.js"></script>
 </html>
