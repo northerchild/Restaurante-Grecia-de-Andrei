@@ -98,13 +98,18 @@
 										%input{type:"text",name:"name",placeholder:"Escribe tú nombre", class:"input", required:true}
 									%fieldset.step
 										%textarea{name:"body",placeholder:"Escribe tú mensaje", class:"input", required:true}
+	#location
+		#map
+
 									
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
 	%script
 		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
-	%script{src:"/assets/js/vendor/form_object.js"}
-	%script{src:"/assets/js/vendor/main.js"}
+	%script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyDmQGjuYqyJnP2fqM8iDx9G7Gnewq0oPjA"}
+	%script{src:"/assets/dist/maps.js"}	
+	%script{src:"/assets/dist/form_object.js"}
+	%script{src:"/assets/dist/main.js"}
 	%script{src:"/assets/dist/steps.js"}	
     	 
 			
