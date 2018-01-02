@@ -79,10 +79,17 @@
 		.row.middle-xs.full-height
 			.col-xs-12
 				.box
+					%p.text-center.medium#info-contacto Presiona Enter para llenar el campo correspondiente y enviarnos un correo
 					%form{action:"https://formspree.io/osarus-13@hotmail.com", method:"POST", id:"contact-form",class:"step-form"}
 						.row.center-xs
-							.col-xs-2.col-md-1
+							.col-xs-2.col-md-1.text-center
 								.box
+									-3.times do |i|
+										-if i == 0
+											.path-step.active
+										-else 
+											.path-step	
+										%br
 							.col-xs-5
 								.box
 									%fieldset.step.active
@@ -91,9 +98,7 @@
 										%input{type:"text",name:"name",placeholder:"Escribe tú nombre", class:"input", required:true}
 									%fieldset.step
 										%textarea{name:"body",placeholder:"Escribe tú mensaje", class:"input", required:true}
-									%div	
-										%button{type:"submit",class:"btn"}Enviar										
-
+									
 
 	%script{src:"https://code.jquery.com/jquery-3.2.1.min.js",integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin:"anonymous"}
 	%script

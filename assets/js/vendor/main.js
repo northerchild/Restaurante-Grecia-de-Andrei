@@ -7,15 +7,6 @@
 	console.log(imageCounter)
 	console.log($(window).height());
 	
-	//Testing del formulario
-	/*
-	$("#contact-form").on("submit",function(e){
-		sendForm($(this))
-		e.preventDefault()
-		return false
-	})
-	*/
-	//fin del testing
 
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
@@ -76,15 +67,5 @@
 		return $(window).scrollTop() > $(window).height() - (descripcionHeight * 1.8)
 	}
 	
-	//Funcion de enviado metodo AJAX
-	function sendForm($form){
-		console.log($form.formObject());
-		$.ajax({
-	    url: $form.attr("action"), 
-	    method: "POST",
-	    data: $form.formObject(),
-	    dataType: "json"
-	})
-	}
 
 })()
