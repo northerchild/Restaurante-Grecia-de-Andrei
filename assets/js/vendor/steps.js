@@ -66,7 +66,7 @@
 		$next_step.addClass("active")
 		$next_step.find(".input").focus()
 		//cordinar los circulos
-		const posicion = ($next_step.index(".step") *2 ) + 1
+		const posicion = ($next_step.index(".step")) + 1
 		$(".path-step.active").removeClass("active")
 		$(".path-step:nth-child("+posicion+")").addClass("active")
 		//$next_step.focus()

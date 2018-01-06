@@ -33,23 +33,25 @@
 					%img{src: "/assets/imgs/logo.png", width: 200}
 					%h1.white-text.dancing-script.title.no-margin Grecia de Andrei - Usaquen
 					%p#is-open.white-text 
-						%i.glyphicon.glyphicon-time AbiertoAhora
+						%i.glyphicon.glyphicon-time 
+						%span.text Abierto Ahora
 			%nav.fixed.top.right.white-text.navigation#navigation
-				-menu = ["Inicio", "Menu", "Galeria", "Contacto", "Cómo llegar"]
+				-menu = [{title:"Inicio",link:"#home"}, {title:"Menu", link:"#menu"}, {title:"Galeria", link:"#gallery"}, {title:"Contacto", link:"#contact"}, {title:"Cómo llegar", link:"#location"}]
 				%ul.list-inline
 					-menu.each do |item|
 						%li
-							%a{:href => "#"}= item
+							%a{href:item[:link]}= item[:title]
 			.absolute.black.large-padding.white-text.full-width.up#description 
 				.row.middle-xs.center-xs
 					.col-xs-7.col-sm-6.white-text.medium Atención cálida y comida preparada por artistas
 					.col-xs.hidden#sticky-navigation
 						.box
-							%nav.text-right.navigation
+							%nav.text-right.navigation#responsive-nav
+								%i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.glyphicon-remove#menu_opener
 								%ul.list-inline
 									-menu.each do |item|
 										%li
-											%a{:href => "#"}= item
+											%a.menu-link{href:item[:link]}= item[:title]
 	.text-center.relative#menu
 		.absolute.white#menu-title
 			%h2.dancing-script.title Menú
@@ -75,7 +77,7 @@
 				%strong.dancing-script.medium Arte
 			%p Grecia de Andrei está ubicado en Usaquén, una linda zona de la ciudad y consolidada como polo gastronómico de Bogotá. En el restaurante encontramos una ventana a la rica gastronomía griega. Si es la primera vez en visitar el lugar se recomienda pedir el souvlakis (pinchos griegos acompañados de papas horneadas al limón), el moussaka o el gyros. En las bebidas encontraremos deliciosos cocteles griegos. El restaurante cuenta con un amplio lounge en el primer piso ideal para compartir en familia o con amigos, y un área más privada en el segundo piso. Ambos espacios han sido cuidadosamente decorados logrando una combinación entre el estilo vintage que va desde la silletería y muebles, hasta artículos deco que cuelgan en sus paredes como botellas y pequeños recipientes, y un concepto más moderno reflejado en los tonos, iluminación y techo maderoso. Si vamos un viernes a la noche podremos vivir un momento bien especial disfrutando música en vivo. Grecia de Andrei abre sus puertas para probar ricos platos gourmet, compartiendo en familia, amigos o en pareja.
 			%strong.dancing-script.medium Coco - Chef Master
-			.large-padding.medium.black.white-text.text-center También puede acceder a nuesta web sin conexión a internet
+			.large-padding.medium.black.white-text.text-center También puedes acceder a nuesta web sin conexión a internet
 	.top-space.black.white-text.full-height#contact
 		.row.middle-xs.full-height
 			.col-xs-12
@@ -83,15 +85,14 @@
 					%p.text-center.medium#info-contacto Presiona Enter para llenar el campo correspondiente y enviarnos un correo
 					%form{action:"https://formspree.io/osarus-13@hotmail.com", method:"POST", id:"contact-form",class:"step-form"}
 						.row.center-xs
-							.col-xs-2.col-md-1.text-center
+							.col-xs-12.col-sm-2.col-md-1.first-sm
 								.box
 									-3.times do |i|
 										-if i == 0
 											.path-step.active
 										-else 
 											.path-step	
-										%br
-							.col-xs-5
+							.col-xs-12.col-sm-3.first-xs
 								.box
 									%fieldset.step.active
 										%input{type:"email",name:"email",placeholder:"Escribe tú correo", class:"input", required:true}

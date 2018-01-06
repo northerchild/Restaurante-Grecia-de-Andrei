@@ -37,26 +37,27 @@ para una mejor experiencia
 <img src="/assets/imgs/logo.png" width="200">
 <h1 class="white-text dancing-script title no-margin">Grecia de Andrei - Usaquen</h1>
 <p class="white-text" id="is-open">
-<i class="glyphicon glyphicon-time">AbiertoAhora</i>
+<i class="glyphicon glyphicon-time"></i>
+<span class="text">Abierto Ahora</span>
 </p>
 </div>
 </div>
 <nav class="fixed top right white-text navigation" id="navigation">
 <ul class="list-inline">
 <li>
-<a href="#">Inicio</a>
+<a href="#home">Inicio</a>
 </li>
 <li>
-<a href="#">Menu</a>
+<a href="#menu">Menu</a>
 </li>
 <li>
-<a href="#">Galeria</a>
+<a href="#gallery">Galeria</a>
 </li>
 <li>
-<a href="#">Contacto</a>
+<a href="#contact">Contacto</a>
 </li>
 <li>
-<a href="#">Cómo llegar</a>
+<a href="#location">Cómo llegar</a>
 </li>
 </ul>
 </nav>
@@ -65,22 +66,23 @@ para una mejor experiencia
 <div class="col-xs-7 col-sm-6 white-text medium">Atención cálida y comida preparada por artistas</div>
 <div class="col-xs hidden" id="sticky-navigation">
 <div class="box">
-<nav class="text-right navigation">
+<nav class="text-right navigation" id="responsive-nav">
+<i class="glyphicon glyphicon-menu-hamburger white-text subtitle glyphicon-remove" id="menu_opener"></i>
 <ul class="list-inline">
 <li>
-<a href="#">Inicio</a>
+<a class="menu-link" href="#home">Inicio</a>
 </li>
 <li>
-<a href="#">Menu</a>
+<a class="menu-link" href="#menu">Menu</a>
 </li>
 <li>
-<a href="#">Galeria</a>
+<a class="menu-link" href="#gallery">Galeria</a>
 </li>
 <li>
-<a href="#">Contacto</a>
+<a class="menu-link" href="#contact">Contacto</a>
 </li>
 <li>
-<a href="#">Cómo llegar</a>
+<a class="menu-link" href="#location">Cómo llegar</a>
 </li>
 </ul>
 </nav>
@@ -197,7 +199,7 @@ cocinar no es una profesión, no es una técnica,	es un
 </h3>
 <p>Grecia de Andrei está ubicado en Usaquén, una linda zona de la ciudad y consolidada como polo gastronómico de Bogotá. En el restaurante encontramos una ventana a la rica gastronomía griega. Si es la primera vez en visitar el lugar se recomienda pedir el souvlakis (pinchos griegos acompañados de papas horneadas al limón), el moussaka o el gyros. En las bebidas encontraremos deliciosos cocteles griegos. El restaurante cuenta con un amplio lounge en el primer piso ideal para compartir en familia o con amigos, y un área más privada en el segundo piso. Ambos espacios han sido cuidadosamente decorados logrando una combinación entre el estilo vintage que va desde la silletería y muebles, hasta artículos deco que cuelgan en sus paredes como botellas y pequeños recipientes, y un concepto más moderno reflejado en los tonos, iluminación y techo maderoso. Si vamos un viernes a la noche podremos vivir un momento bien especial disfrutando música en vivo. Grecia de Andrei abre sus puertas para probar ricos platos gourmet, compartiendo en familia, amigos o en pareja.</p>
 <strong class="dancing-script medium">Coco - Chef Master</strong>
-<div class="large-padding medium black white-text text-center">También puede acceder a nuesta web sin conexión a internet</div>
+<div class="large-padding medium black white-text text-center">También puedes acceder a nuesta web sin conexión a internet</div>
 </div>
 </div>
 <div class="top-space black white-text full-height" id="contact">
@@ -207,17 +209,14 @@ cocinar no es una profesión, no es una técnica,	es un
 <p class="text-center medium" id="info-contacto">Presiona Enter para llenar el campo correspondiente y enviarnos un correo</p>
 <form action="https://formspree.io/osarus-13@hotmail.com" class="step-form" id="contact-form" method="POST">
 <div class="row center-xs">
-<div class="col-xs-2 col-md-1 text-center">
+<div class="col-xs-12 col-sm-2 col-md-1 first-sm">
 <div class="box">
 <div class="path-step active"></div>
-<br>
 <div class="path-step"></div>
-<br>
 <div class="path-step"></div>
-<br>
 </div>
 </div>
-<div class="col-xs-5">
+<div class="col-xs-12 col-sm-3 first-xs">
 <div class="box">
 <fieldset class="step active">
 <input class="input" name="email" placeholder="Escribe tú correo" required type="email">
