@@ -52,6 +52,12 @@
 		{
 			let fieldsetInvalido = $(selector).find(".input:invalid").first().parent()
 			siguiente(fieldsetInvalido)
+			$(".path-step:nth-child(1)").css({
+				background:"#f50f0f"
+			})
+			$(".step").css({
+				color:"#f50f0f"
+			})
 		}
 	}
 
@@ -93,7 +99,6 @@
 		    data: $form.formObject(),
 		    dataType: "json",
 		    success: function(){
-		    	console.log("Hola")
 		    	$form.slideUp()
 		    	$("#info-contacto").html("Enviamos tu mensaje, muy pronto estaremos en contacto contigo.")
 		    }
